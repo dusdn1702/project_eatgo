@@ -1,5 +1,6 @@
 package kr.co.fastcampus.eatgo4.interfaces;
 
+import kr.co.fastcampus.eatgo4.application.RestaurantService;
 import kr.co.fastcampus.eatgo4.domain.MenuItemRepository;
 import kr.co.fastcampus.eatgo4.domain.MenuItemRepositoryImpl;
 import kr.co.fastcampus.eatgo4.domain.RestaurantRepository;
@@ -24,11 +25,8 @@ public class RestaurantControllerTest {
     @Autowired
     private MockMvc mvc;
 
-    @SpyBean(RestaurantRepositoryImpl.class)
-    private RestaurantRepository restaurantRepository;
-
-    @SpyBean(MenuItemRepositoryImpl.class)
-    private MenuItemRepository menuItemRepository;
+    @SpyBean(RestaurantService.class)
+    private RestaurantService restaurantService;
 
     @Test
     public void list() throws Exception {
