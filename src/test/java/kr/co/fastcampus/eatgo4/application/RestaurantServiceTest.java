@@ -41,6 +41,6 @@ public class RestaurantServiceTest {
 
         MenuItem menuItem = restaurant.getMenuItems().get(0);
 
-        assertThat(restaurant.getName(), is("Kimchi"));
+        assertThat(restaurant.getName(), is("Bob zip"));
     }
 }
