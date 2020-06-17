@@ -1,13 +1,25 @@
 package kr.co.fastcampus.eatgo4.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Restaurant {
+
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    private Long restaurantId;
 
     private String name;
     private String address;
-    private Long id;
+
+    @Transient
     private List<MenuItem> menuItems = new ArrayList<MenuItem>();
 
     public Restaurant() {
@@ -40,7 +52,7 @@ public class Restaurant {
         return address;
     }
 
-    public Object getId() {
+    public Long getId() {
         return id;
     }
 
