@@ -81,7 +81,7 @@ public class RestaurantControllerTest {
                         containsString("\"name\":\"Cyber Food\"")
                 ));
     }
-
+/*
     @Test
     public void create() throws Exception {
         mvc.perform(post("/restaurants")
@@ -92,5 +92,5 @@ public class RestaurantControllerTest {
                 .andExpect(content().string("{}"));
 
         verify(restaurantService).addRestaurant(any());
-    }
+    }*/
 }
